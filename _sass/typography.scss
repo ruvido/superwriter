@@ -1,0 +1,189 @@
+//--------------------------------------------------
+// FONT SIZES
+//--------------------------------------------------
+
+// http://type-scale.com/
+// 1.618 Golden Ratio
+
+// $script-font-size:  0.618rem;
+// $min-font-size:     0.8rem;   // Major third
+// $regular-font-size: 1rem;
+// $maj-font-size:     1.250rem; // Major third
+// $mid-font-size:     1.414rem; // Augmented fourth
+// $big-font-size:     1.618rem;
+// $bigger-font-size:  2.618rem;
+
+// http://type-scale.com/
+// 1.250 Major third scale
+
+$script-font-size:  0.640rem;
+$small-font-size:   0.800rem;
+$regular-font-size: 1.000rem;
+$mid-font-size:     1.250rem;
+$big-font-size:     1.563rem;
+$bigger-font-size:  1.953rem;
+$huge-font-size:    2.441rem;
+
+//--------------------------------------------------
+// FONT TYPES
+//--------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+.text-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
+.header-font{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,700i');
+.summary-font{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
+.light-font{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+//--------------------------------------------------
+// DEFAULTS
+//--------------------------------------------------
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+body {
+  font-size: 100%;
+  @extend .text-font;
+  color: $dark-black;
+}
+
+strong, .bold { font-weight: bold;  }
+em { font-style: italic; }
+small { font-size: $script-font-size;}
+
+// .script-font-size {font-size: $script-font-size;}
+// .min-font-size {font-size: $small-font-size;}
+// .regular-font-size {font-size: $regular-font-size;}
+// .maj-font-size {font-size: $maj-font-size;}
+// .mid-font-size {font-size: $mid-font-size;}
+// .big-font-size {font-size: $big-font-size;}
+// .bigger-font-size {font-size: $bigger-font-size;}
+
+.line-height-1-2 {line-height: 1.2;}
+.line-height-1-4 {line-height: 1.4;}
+
+.uppercase{text-transform: uppercase;}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+a.no-decoration {
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+// h1, .post-index h2 {
+//   @extend .header-font;
+//   font-size: $bigger-font-size;
+//   padding-top: 0;
+// }
+// h2 {
+//   @extend .header-font;
+//   font-size: $big-font-size;
+//   padding-top: $big-font-size;
+// }
+// h3 {
+//   @extend .header-font;
+//   font-size: $big-font-size;
+//   padding-top: $big-font-size;
+// }
+//
+// h4, .page-summary h3 {
+//   @extend .summary-font;
+//   font-size: $mid-font-size;
+//   padding-top: $mid-font-size;
+// }
+// h5 {
+//   @extend .summary-font;
+//   font-size: $regular-font-size;
+//   padding-top: $regular-font-size;
+// }
+
+.page-text, .page-header {
+  h1 {
+    @extend .header-font;
+    font-size: $bigger-font-size;
+    padding-top: 0;
+  }
+  h2 {
+    @extend .header-font;
+    font-size: $big-font-size;
+    padding-top: $big-font-size;
+  }
+  h3 {
+    @extend .header-font;
+    font-size: $big-font-size;
+    padding-top: $big-font-size;
+  }
+
+  h4, .page-summary h3 {
+    @extend .summary-font;
+    font-size: $mid-font-size;
+    padding-top: $mid-font-size;
+  }
+  h5 {
+    @extend .summary-font;
+    font-size: $regular-font-size;
+    padding-top: $regular-font-size;
+  }
+}
+.index {
+  .title{
+    a {border: 0px;}
+    h2 {font-size: $mid-font-size; padding: $script-font-size 0 0 0;}
+  }
+  .author{
+    font-size: $regular-font-size; padding: $script-font-size 0 0 0;
+  }
+  .summary{
+    h3 {font-size: $mid-font-size; padding: $script-font-size 0 0 0;}
+  }
+}
+
+blockquote {
+  p {
+    @extend .summary-font;
+    margin: $script-font-size 0;
+    padding-left: $regular-font-size;
+    font-size: $mid-font-size;
+    border-left: $script-font-size solid $light-gray;
+  }
+  cite{
+    font-size: $regular-font-size;
+    color: $light-gray;
+  }
+  cite:before{content:"\2014"; padding-right: 0.2rem;}
+}
+
+p {
+  padding: $script-font-size 0rem;
+  line-height: strip-unit($big-font-size);
+  text-align: left;
+}
+
+.responsive-font-size {
+  font-size: $regular-font-size;
+  @media (min-width: $tablet) {
+    font-size: $mid-font-size;
+  }
+}

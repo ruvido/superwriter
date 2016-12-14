@@ -1,0 +1,20 @@
+---
+# Superwriter stylesheet for Jekyll.
+---
+// Global variables
+$tablet: 600px;
+$desktop: 1024px;
+
+// Functions
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// Imports
+@import "reset";
+@import "palettes";
+@import "typography";
+@import "layout";

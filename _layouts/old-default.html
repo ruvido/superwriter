@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="bigger-padding-top script-padding-bottom">
+      <div class="width-20 margin-0-auto min-width-50 max-width-100">
+        <img class="width-100" alt="{{site.title}} logo" src="{{site.baseurl}}/{{site.header.logo-img}}">
+      </div>
+      <div class="width-60 max-width-400 margin-0-auto">
+        <h1 class="hidden">{{site.title}}</h1>
+        <img class="width-100" alt="{{site.title}}" src="{{site.baseurl}}/{{site.header.title-img}}">
+      </div>
+      <h2 class="light-font uppercase center-align">{{site.header.subtitle}}</h2>
+    </header>
+
+    <menu class="center-align responsive-padding-bottom">
+      <ul>
+      {% for item in site.data.menu %}
+        <li class="top-menu-item {% cycle 'color-1', 'color-2', 'color-3', 'color-4' %}">
+          <a href="{{site.baseurl}}/{{item.url}}">{{item.name}}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </menu>
+
+    <main class="page-content" aria-label="Content">
+
+      {{ content }}
+
+    </main>
+
+    <footer>
+
+      <div class="see-all-posts wrapper" >
+        <a href="{{site.archive}}">
+          See all posts <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-menu wrapper" >
+        <ul class="">
+        {% for item in site.data.footer %}
+          <li><a href="{{site.baseurl}}/{{item.url}}">{{item.name}}</a></li>
+        {% endfor %}
+        </ul>
+
+        <div class="footer-script-note">
+          {{ site.footer-script-note }}
+        </div>
+
+      </div>
+
+    </footer>
+  </body>
+
+</html>

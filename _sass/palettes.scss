@@ -1,0 +1,39 @@
+// Very cool color palettes
+
+$dark-black:   #303030;
+$light-gray:   #D1D5D8;
+$mid-gray:     #666666;
+$brand-blue:   #3498DB;
+$vivid-yellow: #F1C40F;
+$opaque-red:   #E74C3C;
+$marine-green: #1ABC9C;
+
+// Menu colors
+.color-1 {background-color: $marine-green;}
+.color-2 {background-color: $opaque-red;}
+.color-3 {background-color: $vivid-yellow;}
+.color-4 {background-color: $brand-blue;}
+
+a {
+  color: $brand-blue;
+}
+
+a.dark-link {
+  color: $dark-black;
+}
+
+.footer-menu {
+  background-color: $opaque-red;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+// $dark-black:   #303030;
+.light-gray, .light-gray a {color: $light-gray;}
+// $mid-gray:     #666666;
+// $brand-blue:   #3498DB;
+// $vivid-yellow: #F1C40F;
+// $opaque-red:   #E74C3C;
+// $marine-green: #1ABC9C;

@@ -1,0 +1,8 @@
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+
+_posts
+.DS_Store

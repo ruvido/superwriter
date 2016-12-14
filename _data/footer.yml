@@ -1,0 +1,8 @@
+- name: Write us
+  url:  "write-us"
+
+- name: Subscribe!
+  url:  "subscribe"
+
+- name: "Follow us on <i class='fa fa-facebook-square' aria-hidden='true'></i>"
+  url: "https://www.facebook.com/5loaves2fish.blog"

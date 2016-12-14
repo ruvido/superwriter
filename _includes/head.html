@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png"  href="{{site.baseurl}}/{{site.favicon}}">
+
+  <title>{% if page.title %}{{ page.title | append: ' | ' | append: site.title | escape }}{% else %}{{ site.title | append: ' | ' | append: site.subtitle  | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+<!-- Font awesome -->
+<!-- to be optimized with http://fontello.com/ -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {% include facebook_opengraph.html %}
+  {% include google_analytics.html %}
+
+</head>
