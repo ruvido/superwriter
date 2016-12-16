@@ -5,42 +5,34 @@ layout: default
 <!-- ====================================== -->
 {% if site.landing == "index" %}
 
-<ul class="index wrapper">
-{% for post in site.posts limit:site.post-per-page %}
-<li>
+<section class="index">
+  {% for post in site.posts limit:site.post-per-page %}
+    <h2 class="catchy-headline">
+    <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
 
-  <h2 class="header-font big-font-size line-height-1-2">
-    <a class="dark-link no-decoration" href="{{post.url}}">{{ post.title }}</a>
-  </h2>
+    <section class="small details block">
+      by <a href="{{site.baseurl}}/about">{{post.author | capitalize}}</a>,
+      <time>{{post.date | date: "%b %d %Y"}}</time>
+    </section>
 
-  <div class="light-font min-font-size script-padding-top">
-    by <a href="{{site.baseurl}}/about">{{post.author | capitalize}}</a>,
-    {{post.date | date: "%B %d %Y"}}
-  </div>
+    <section class="small summary">{{post.summary | truncatewords: 20}}</section>
 
-  <h3 class="summary-font regular-font-size line-height-1-4 script-padding-top light-gray">
-    {{ post.summary }}
-  </h3>
-
-  <div class="summary-font regular-font-size light-gray uppercase script-padding-top" >
-    <a class="no-decoration" href="{{post.url}}">
-      Read more <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <a class="small follow-up block" href="{{site.baseurl}}{{post.url}}">
+      {{site.localization.read-more}} <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </a>
-  </div>
 
-</li>
-{% endfor %}
-</ul>
+  {% endfor %}
+</section>
 
 
-<!-- ====================================== -->
-{% elsif site.landing == "single" %}
+  <!-- ====================================== -->
+  {% elsif site.landing == "single" %}
 
-This is the last post
+  This is the last post
 
-<!-- ====================================== -->
-{% elsif site.landing == "page" %}
+  <!-- ====================================== -->
+  {% elsif site.landing == "page" %}
 
-This is a page
+  This is a page
 
-{% endif %}
+  {% endif %}

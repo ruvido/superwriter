@@ -39,11 +39,11 @@ $huge-font-size:    2.441rem;
   font-weight: 900;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:700,700i');
-.summary-font{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-}
+// @import url('https://fonts.googleapis.com/css?family=Raleway:700,700i');
+// .summary-font{
+//   font-family: 'Raleway', sans-serif;
+//   font-weight: 700;
+// }
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400');
 .light-font{
@@ -55,7 +55,7 @@ $huge-font-size:    2.441rem;
 // DEFAULTS
 //--------------------------------------------------
 
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, .author {
   font-size-adjust: 0.5;
 }
 
@@ -69,22 +69,11 @@ strong, .bold { font-weight: bold;  }
 em { font-style: italic; }
 small { font-size: $script-font-size;}
 
-// .script-font-size {font-size: $script-font-size;}
-// .min-font-size {font-size: $small-font-size;}
-// .regular-font-size {font-size: $regular-font-size;}
-// .maj-font-size {font-size: $maj-font-size;}
-// .mid-font-size {font-size: $mid-font-size;}
-// .big-font-size {font-size: $big-font-size;}
-// .bigger-font-size {font-size: $bigger-font-size;}
-
-.line-height-1-2 {line-height: 1.2;}
-.line-height-1-4 {line-height: 1.4;}
-
-.uppercase{text-transform: uppercase;}
-
 a {
+  color: $dark-black;
   text-decoration: none;
-  border-bottom: 1px dashed;
+  border-bottom: 1px solid $acid-blue;
+  // border-bottom: 1px solid #7f8c8d;
 }
 
 a.no-decoration {
@@ -137,12 +126,12 @@ a.no-decoration {
   }
 
   h4, .page-summary h3 {
-    @extend .summary-font;
+    // @extend .summary-font;
     font-size: $mid-font-size;
     padding-top: $mid-font-size;
   }
   h5 {
-    @extend .summary-font;
+    // @extend .summary-font;
     font-size: $regular-font-size;
     padding-top: $regular-font-size;
   }
@@ -162,7 +151,8 @@ a.no-decoration {
 
 blockquote {
   p {
-    @extend .summary-font;
+    // @extend .summary-font;
+    font-weight: bold;
     margin: $script-font-size 0;
     padding-left: $regular-font-size;
     font-size: $mid-font-size;

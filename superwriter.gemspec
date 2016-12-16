@@ -3,11 +3,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "superwriter"
   spec.version       = "0.1.0"
-  spec.authors       = [""]
-  spec.email         = [""]
+  spec.authors       = ["Francesco Rao"]
+  spec.email         = ["ruvido@gmail.com"]
 
-  spec.summary       = %q{SuperWriter is a Jekyll theme to ehance your writer experience}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Superwriter is a minimalistic theme for bloggers with post hero image and well thought typography.}
+  spec.homepage      = "https://github.com/ruvido/superwriter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }

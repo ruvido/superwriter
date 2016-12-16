@@ -6,10 +6,12 @@
   <body>
 
     <header>
-      <img class="logo-image" alt="{{site.title}} logo" src="{{site.baseurl}}/{{site.header.logo-img}}">
-      <img class="main-header-title" alt="{{site.title}}" src="{{site.baseurl}}/{{site.header.title-img}}">
-      <h1>{{site.title}}</h1>
-      <h2>{{site.header.subtitle}}</h2>
+      <a href="{{site.baseurl}}/">
+        <img class="logo-image" alt="{{site.title}} logo" src="{{site.baseurl}}/{{site.header.logo-img}}">
+        <img class="main-header-title" alt="{{site.title}}" src="{{site.baseurl}}/{{site.header.title-img}}">
+        <h1 class="hidden">{{site.title}}</h1>
+        <h2>{{site.header.subtitle}}</h2>
+      </a>
     </header>
 
     <nav>
@@ -19,32 +21,37 @@
       {% endfor %}
     </nav>
 
+
     <main>
       {{ content }}
     </main>
 
+    <!-- <section class="see-all-posts" >
+      <a href="{{site.archive}}">See all posts <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </section> -->
+
+    <section class="meaningful-block">
+      <a class="big follow-up" href="{{site.baseurl}}/{{site.archive}}">{{site.localization.see-all-posts}} <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </section>
+
     <footer>
 
-      <div class="see-all-posts wrapper" >
-        <a href="{{site.archive}}">
-          See all posts <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </a>
-      </div>
-
-      <div class="footer-menu wrapper" >
-        <ul class="">
+      <nav class="footer-menu" >
         {% for item in site.data.footer %}
-          <li><a href="{{site.baseurl}}/{{item.url}}">{{item.name}}</a></li>
+          {% if item.url contains "http" %}
+            <a href="{{item.url}}">{{item.name}}</a>
+          {% else %}
+            <a href="{{site.baseurl}}/{{item.url}}">{{item.name}}</a>
+          {% endif %}
         {% endfor %}
-        </ul>
+      </nav>
 
-        <div class="footer-script-note">
-          {{ site.footer-script-note }}
-        </div>
-
-      </div>
+      <section class="footer-script-note">
+        {{ site.footer-script-note }}
+      </section>
 
     </footer>
+
   </body>
 
 </html>

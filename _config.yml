@@ -2,10 +2,18 @@
 title: 5loaves2fish
 subtitle: When you want more
 description: When you want more
+url: http://5loaves2fish.blog
+# baseurl: "/caz"
+baseurl: ""
+theme: superwriter
+
+localization:
+  read-more: "Read more"
+  see-all-posts: "See all posts"
 
 # landing type: index | single | page
 landing: index
-post-per-page: 2
+post-per-page: 10
 archive: /archive
 favicon: images/logo/logo-64x64.png
 header:

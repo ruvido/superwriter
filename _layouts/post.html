@@ -2,50 +2,57 @@
 layout: default
 ---
 
+
 {% if page.image %}
-<figure class="max-width-800 margin-0-auto script-padding-bottom">
-  <img class="width-100" alt="{page.title}" src="{{site.baseurl}}{{page.image}}" />
-  <figcaption></figcaption>
+<figure>
+  <img alt="{{page.title}}" src="{{site.baseurl}}{{page.image}}" />
+  <figcaption>{{page.caption}}</figcaption>
 </figure>
 {% endif %}
 
-<section class="page-header wrapper">
+<header>
 
   <h1>{{ page.title }}</h1>
 
   {% if page.author %}
-  <div class="author">
+  <section class="author">
     by <a href="{{site.baseurl}}/about">{{page.author | capitalize}}</a>,
-    {{page.date | date: "%B %d %Y"}}
-  </div>
+    <time datetime="{{page.date}}">{{page.date | date: "%B %d %Y"}}</time>
+  </section>
   {% endif %}
 
   {% if page.summary %}
-  <div class="summary">
-    <h4>{{ page.summary }}</h4>
-  </div>
+  <section class="summary">{{ page.summary }}</section>
   {% endif %}
 
-</section>
+</header>
 
-<section class="page-text wrapper">
+<article>
 
   {{ content }}
 
-  <div class="page-end-logo">
-    <img alt="{{site.title}}" src="{{site.baseurl}}/{{site.header.logo-img}}">
-  </div>
+  <figure class="page-end-logo">
+    <img alt="{{site.title}}" src="{{site.baseurl}}/{{site.header.logo-img}}" />
+  </figure>
 
+</article>
 
   <!-- TODO -->
-  {% if page.read-more %}
-  <div class="page-read-more">
-    <h3>Read more</h3>
-    {% for post in site.posts %}
-      <h3>{{post.title}}</h3>
+
+  {% if site.upcoming-events %}
+  <section class="upcoming-events">
+    <header>Upcoming events</header>
+    {% for event in site.events %}
+      <h2>{{event.title}}</h2>
     {% endfor %}
-  </div>
+  </section>
   {% endif %}
 
-
-</section>
+  {% if page.read-more %}
+  <section class="read-more">
+    <header>Read more</header>
+    {% for post in site.posts %}
+      <h2>{{post.title}}</h2>
+    {% endfor %}
+  </section>
+  {% endif %}

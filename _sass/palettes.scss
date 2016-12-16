@@ -4,6 +4,7 @@ $dark-black:   #303030;
 $light-gray:   #D1D5D8;
 $mid-gray:     #666666;
 $brand-blue:   #3498DB;
+$acid-blue:    #19B5FE;
 $vivid-yellow: #F1C40F;
 $opaque-red:   #E74C3C;
 $marine-green: #1ABC9C;
@@ -14,21 +15,9 @@ $marine-green: #1ABC9C;
 .color-3 {background-color: $vivid-yellow;}
 .color-4 {background-color: $brand-blue;}
 
-a {
-  color: $brand-blue;
-}
-
-a.dark-link {
-  color: $dark-black;
-}
-
-.footer-menu {
-  background-color: $opaque-red;
-  color: white;
-  a {
-    color: white;
-  }
-}
+a {color: $dark-black;}
+a.dark-link {color: $dark-black;}
+a.color-link {color: $brand-blue;}
 
 // $dark-black:   #303030;
 .light-gray, .light-gray a {color: $light-gray;}
