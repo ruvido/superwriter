@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Francesco Rao"]
   spec.email         = ["ruvido@gmail.com"]
 
-  spec.summary       = %q{Superwriter is a minimalistic theme for bloggers with post hero image and well thought typography.}
+  spec.summary       = %q{Superwriter is a minimalistic Jekyll theme for bloggers with post hero image and well thought typography.}
   spec.homepage      = "https://github.com/ruvido/superwriter"
   spec.license       = "MIT"
 
