@@ -78,6 +78,8 @@ Top menu and footer secondary menu links are defined in the ```_data``` folder. 
 - Upcoming events footer
 - Define categories
 - Hero image caption for credits
+- Make global variable ```archive``` optional
+- require jekyll plugin to include data e config files from theme
 
 ## Contributing
 
