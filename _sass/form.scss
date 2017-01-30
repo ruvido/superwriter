@@ -1,0 +1,137 @@
+$dark-blue-tone: #2c3e50;
+$mid-dark-blue-tone: #5D6D7E; //#34495e;
+$light-dark-blue-tone: #85929E;
+
+.dark.login {
+  background-color: $dark-blue-tone;
+  color: $light-dark-blue-tone;
+}
+
+header.login {
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+header.login p {
+  padding: 0; margin:0;
+}
+
+p.big {
+  font-size: $big-font-size;
+}
+
+p.center.text {
+  text-align: center;
+  margin: 0;
+  padding:0;
+}
+
+.login.logo {
+  width: 100px;
+  margin: 0 auto;
+  padding: 4rem 0 2rem 0;
+}
+
+input {
+  font-size: $regular-font-size;
+  border: 0px;
+  padding-top: $regular-font-size;
+  padding-bottom: $script-font-size;
+  width: 100%;
+  border-bottom: 2px solid $light-gray;
+  outline: none;
+  color: $light-gray;
+}
+
+.dark.login input {
+  background-color: $dark-blue-tone;
+  border-bottom: 1px solid $light-dark-blue-tone;
+}
+
+
+.btn {
+  text-align: center;
+  width: 6rem;
+  font-size: $regular-font-size;
+  margin: $regular-font-size $script-font-size 0 0;;
+  padding: $script-font-size 0;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: none;
+  border: 2px solid $light-gray;
+  color: $light-gray;
+  outline: none;
+}
+.btn:active{
+  opacity: 0.8;
+  // transition: all 0.1s;
+}
+.btn.action {
+  background-color: $brand-blue;
+  border-color: $brand-blue;
+  color: white;
+}
+.btn.secondary {}
+.btn.alert {
+  background-color: $opaque-red;
+  border-color: $opaque-red;
+  color: white;
+}
+.btn.full-width {width: 100%;}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $mid-dark-blue-tone;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}
+
+.box{
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  line-height: 1.2;
+  margin: 0.2rem auto;
+  transition: all .25s ease;
+}
+.alert.box {
+  font-size: $small-font-size;
+  background-color: #e74c3c;
+  color: #F5B7B1;
+}
+
+.secondary.alert.box {
+  background-color: #9b59b6;
+  color: #D7BDE2;
+}
+
+.positive.box {
+  background-color: #2ecc71;
+  color: #ABEBC6;
+}
+.confirmation.box{
+  text-align: center;
+}
+
+
+// ------------------------------------------------
+// GENERAL CLASSES
+// ------------------------------------------------
+.hide {
+  display: none;
+}
+.footnote {
+  font-size: $script-font-size;
+}
+.center {
+  text-align: center;
+}
+.light, .light a {
+  color: $light-gray;
+}
